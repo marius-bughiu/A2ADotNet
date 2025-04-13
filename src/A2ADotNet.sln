@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2ADotNet.Core", "A2ADotNet.Core\A2ADotNet.Core.csproj", "{A8237949-8D86-43C6-9CF7-2BF834421022}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2ADotNet.Client", "A2ADotNet.Client\A2ADotNet.Client.csproj", "{059D82B5-6D51-E323-F0DE-710DF1696D95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2ADotNet.Server", "A2ADotNet.Server\A2ADotNet.Server.csproj", "{B62A99C5-4014-93A6-FCB6-9A6E68630B8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A8237949-8D86-43C6-9CF7-2BF834421022}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8237949-8D86-43C6-9CF7-2BF834421022}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8237949-8D86-43C6-9CF7-2BF834421022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{059D82B5-6D51-E323-F0DE-710DF1696D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{059D82B5-6D51-E323-F0DE-710DF1696D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{059D82B5-6D51-E323-F0DE-710DF1696D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{059D82B5-6D51-E323-F0DE-710DF1696D95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B62A99C5-4014-93A6-FCB6-9A6E68630B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B62A99C5-4014-93A6-FCB6-9A6E68630B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B62A99C5-4014-93A6-FCB6-9A6E68630B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B62A99C5-4014-93A6-FCB6-9A6E68630B8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
