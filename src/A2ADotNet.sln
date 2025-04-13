@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2ADotNet.Client", "A2ADotN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2ADotNet.Server", "A2ADotNet.Server\A2ADotNet.Server.csproj", "{B62A99C5-4014-93A6-FCB6-9A6E68630B8F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2ADotNet.Client.Tests", "Tests\A2ADotNet.Client.Tests\A2ADotNet.Client.Tests.csproj", "{572BFFCB-CC13-4731-8DB8-4E384596AB65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{B62A99C5-4014-93A6-FCB6-9A6E68630B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B62A99C5-4014-93A6-FCB6-9A6E68630B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B62A99C5-4014-93A6-FCB6-9A6E68630B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{572BFFCB-CC13-4731-8DB8-4E384596AB65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{572BFFCB-CC13-4731-8DB8-4E384596AB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{572BFFCB-CC13-4731-8DB8-4E384596AB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{572BFFCB-CC13-4731-8DB8-4E384596AB65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{572BFFCB-CC13-4731-8DB8-4E384596AB65} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0871666D-D06E-4345-B168-5C69BBBDFD19}
