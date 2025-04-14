@@ -18,11 +18,11 @@ public class A2ACardResolver(string baseUrl, string agentCardPath = "/.well-know
         {
             var json = await response.Content.ReadAsStringAsync();
             return JsonSerializer.Deserialize<AgentCard>(json)
-                   ?? throw new A2AClientJSONError($"Failed to deserialize {nameof(AgentCard)}.");
+                   ?? throw new A2AClientJsonError($"Failed to deserialize {nameof(AgentCard)}.");
         }
         catch (JsonException ex)
         {
-            throw new A2AClientJSONError(ex.Message, ex);
+            throw new A2AClientJsonError(ex.Message, ex);
         }
     }
 }
