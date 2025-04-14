@@ -8,7 +8,7 @@ public class A2AClient
 {
     private readonly string _url;
 
-    public A2AClient(AgentCard agentCard = null, string url = null)
+    public A2AClient(AgentCard? agentCard = null, string? url = null)
     {
         if (agentCard != null)
         {
@@ -20,7 +20,7 @@ public class A2AClient
         }
         else
         {
-            throw new ArgumentException("Must provide either agentCard or url.");
+            throw new ArgumentException($"Must provide either {nameof(agentCard)} or {nameof(url)}.");
         }
     }
 
@@ -31,7 +31,14 @@ public class A2AClient
         return new SendTaskResponse(response);
     }
 
+    /// <summary>
+    /// NoOp. Not implemented yet.
+    /// </summary>
+    /// <param name="payload"></param>
+    /// <returns></returns>
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
     public async IAsyncEnumerable<SendTaskStreamingResponse> SendTaskStreaming(Dictionary<string, object> payload)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
     {
         // SSE streaming logic (placeholder).
         // In practice, connect to _url with an SSE-capable library or custom implementation,
@@ -47,7 +54,9 @@ public class A2AClient
             var httpResponse = await client.PostAsJsonAsync(_url, request);
             httpResponse.EnsureSuccessStatusCode();
             var content = await httpResponse.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<Dictionary<string, object>>(content);
+            var response = JsonSerializer.Deserialize<Dictionary<string, object>>(content);
+
+            return response == null ? throw new A2AClientJsonError("Response is null.") : response;
         }
         catch (HttpRequestException e)
         {
@@ -55,7 +64,7 @@ public class A2AClient
         }
         catch (JsonException e)
         {
-            throw new A2AClientJSONError(e.Message);
+            throw new A2AClientJsonError(e.Message);
         }
     }
 
